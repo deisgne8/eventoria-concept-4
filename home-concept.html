@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eventoria plans and produces considered events, from first brief to final guest departure.">
+  <title>Eventoria — Homepage Concept</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2321262d'/%3E%3Cpath d='M8 9h16v4H13v3h8v4h-8v3H8z' fill='%23f3f0e9'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="concept.css?v=circle-event-photos-2-eventoria-media-sequence-158">
+  <style>
+    .expertise-build__heading h2 span{font-style:normal!important;color:var(--eventoria-ivory-sand)!important}
+    .site-footer .footer-grid>div:last-child a[aria-label]{border-radius:50%!important}
+    .site-footer .footer-grid>div:last-child a[aria-label="Instagram"]{position:relative!important;display:block!important;width:48px!important;height:48px!important;min-width:48px!important;padding:0!important;line-height:0!important}
+    .site-footer .footer-grid>div:last-child a[aria-label="Instagram"]::before{display:block!important;position:absolute!important;inset:0!important;width:20px!important;height:20px!important;margin:auto!important;padding:0!important;transform:none!important;box-sizing:border-box!important;line-height:0!important;background-position:center!important;background-size:20px 20px!important}
+    main > section:not(.hero) h2,
+    main > section:not(.hero) .section-heading h2,
+    main > section:not(.hero) .process h2,
+    main > section:not(.hero) .proof h2,
+    main > section:not(.hero) .contact h2{font:300 clamp(42px,5.1vw,76px)/.88 'Clash Grotesk',sans-serif!important;letter-spacing:-.08em!important}
+    main > section:not(.hero) h2 span,
+    main > section:not(.hero) .section-heading h2 span,
+    main > section:not(.hero) .process h2 span,
+    main > section:not(.hero) .proof h2 span,
+    main > section:not(.hero) .contact h2 span{font-style:normal!important}
+    .work .section-heading h2,
+    .work .section-heading h2 span{color:var(--eventoria-ivory-sand)!important}
+    .clients .section-heading h2,
+    .clients .section-heading h2 span{color:var(--eventoria-ivory-sand)!important}
+    .hero-reference-message__lead,
+    .hero-reference-message__title{opacity:0!important;transform:translateY(28px)!important;clip-path:inset(0 0 100% 0)!important;transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),clip-path .9s cubic-bezier(.22,1,.36,1)!important}
+    .hero-stage>.hero.is-scroll-revealed .hero-reference-message__lead,
+    .hero-stage>.hero.is-scroll-revealed .hero-reference-message__title{opacity:1!important;transform:translateY(0)!important;clip-path:inset(0 0 0 0)!important}
+    .hero-stage>.hero.is-scroll-revealed .hero-reference-message__title{transition-delay:.12s!important}
+    /* Keep the loader logo clean; remove the decorative sparkle burst. */
+    .concept-loader__particles,
+    .concept-loader.is-revealing .concept-loader__particles,
+    .concept-loader__wave-field{display:none!important;opacity:0!important}
+
+    /* Keep the shared atmosphere blue/transparent; remove its black center overlay. */
+    main::before{
+      background:
+        radial-gradient(ellipse 38% 58% at 14% 74%,rgba(19,109,244,.34),transparent 72%),
+        radial-gradient(ellipse 36% 52% at 88% 22%,rgba(19,109,244,.28),transparent 74%),
+        url('assets/eventoria-how-it-works-wave-glow.png') center 56% / 145% 145% fixed no-repeat!important;
+    }
+    main > section.process,
+    main > section#proof{background:transparent!important}
+    main > section.process::after{display:none!important;content:none!important}
+
+    #core-idea{padding-bottom:clamp(300px,35vh,520px)!important}
+
+    /* Conicorn-style button hover: label up/out, replacement label up from below. */
+    .button .button-label{position:relative!important;display:block!important;overflow:hidden!important;height:1.25em!important;line-height:1.25!important;white-space:nowrap!important;isolation:isolate!important}
+    .button .button-label::before,
+    .button .button-label::after{content:attr(data-button-label)!important;position:absolute!important;left:0!important;right:0!important;display:block!important;transition:transform .55s cubic-bezier(.22,1,.36,1)!important}
+    .button .button-label::before,.button .button-label::after{height:1.25em!important;line-height:1.25!important;white-space:nowrap!important;backface-visibility:hidden!important}
+    .button .button-label::before{top:0!important;transform:translate3d(0,0,0)!important}
+    .button .button-label::after{top:0!important;transform:translate3d(0,115%,0)!important;visibility:hidden!important}
+    .button:hover .button-label::before,.button:focus-visible .button-label::before{transform:translate3d(0,-115%,0)!important}
+    .button:hover .button-label::after,.button:focus-visible .button-label::after{transform:translate3d(0,0,0)!important;visibility:visible!important}
+    .button .button-icon{position:relative!important;overflow:hidden!important}
+    .button .button-icon::before,.button .button-icon::after{position:absolute!important;inset:0!important;margin:auto!important;transition:transform .55s cubic-bezier(.22,1,.36,1)!important}
+    .button .button-icon::before{transform:translateX(0)!important}
+    .button .button-icon::after{content:''!important;width:24px!important;height:24px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-visible-1') center/24px 24px no-repeat!important;transform:translateX(-145%)!important}
+    .button:hover .button-icon::before,.button:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    .button:hover .button-icon::after,.button:focus-visible .button-icon::after{transform:translateX(0)!important}
+    .hero-actions .button-accent .button-label{justify-content:center!important;padding:0!important}
+    .hero-actions .button .button-label{position:relative!important;left:auto!important;right:auto!important;top:auto!important;width:auto!important;max-width:none!important;text-align:center!important;transform:none!important}
+    .hero-stage > .hero-copy > .hero-actions .button-accent .button-label{position:relative!important;inset:auto!important;display:flex!important;flex:1 1 auto!important;align-items:center!important;justify-content:center!important;width:auto!important;max-width:none!important;padding:0!important;transform:none!important}
+    .hero-actions .button-accent .button-icon{flex-basis:36px!important;min-width:36px!important;width:36px!important;height:36px!important}
+    .hero-actions .button-accent .button-icon::before,
+    .hero-actions .button-accent .button-icon::before,
+    .hero-actions .button-accent .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-same-2') center/12px 12px no-repeat!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-accent:hover .button-icon::before,
+    .hero-stage > .hero .hero-copy .hero-actions .button-accent:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-accent:hover .button-icon::after,
+    .hero-stage > .hero .hero-copy .hero-actions .button-accent:focus-visible .button-icon::after{transform:translateX(0)!important}
+    /* Reuse the same Conicorn-style text and arrow swap on every CTA. */
+    main .button:hover .button-label::before,
+    main .button:focus-visible .button-label::before{transform:translate3d(0,-115%,0)!important}
+    main .button:hover .button-label::after,
+    main .button:focus-visible .button-label::after{transform:translate3d(0,0,0)!important;visibility:visible!important}
+    main .button:hover .button-icon::before,
+    main .button:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    main .button:hover .button-icon::after,
+    main .button:focus-visible .button-icon::after{transform:translateX(0)!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-outline{position:relative!important;width:270px!important;justify-content:center!important;gap:0!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-outline .button-avatar-group{position:absolute!important;left:12px!important;top:50%!important;margin:0!important;transform:translateY(-50%)!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-outline .button-label{position:absolute!important;left:58%!important;top:50%!important;right:auto!important;display:block!important;flex:0 0 150px!important;min-width:150px!important;width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important;transform:translate(-50%,-50%)!important}
+    .hero-stage > .hero .hero-copy .hero-actions .button-outline .button-label::before,
+    .hero-stage > .hero .hero-copy .hero-actions .button-outline .button-label::after{left:0!important;right:0!important;text-align:center!important}
+    main .intro .button.button-accent{width:230px!important;height:56px!important;min-height:56px!important;margin-inline:auto!important;padding:4px!important;border:1px solid transparent!important;border-radius:999px!important;background:linear-gradient(90deg,rgba(8,13,18,.88),rgba(15,28,34,.72)) padding-box,linear-gradient(110deg,#3e92ac 0%,#136df4 100%) border-box!important;color:#fff!important;box-shadow:inset 0 0 16px rgba(255,255,255,.32),0 10px 26px rgba(0,0,0,.18)!important;text-transform:none!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important}
+    main .intro .button.button-accent .button-label{position:relative!important;inset:auto!important;display:block!important;flex:0 0 auto!important;width:150px!important;height:1.25em!important;min-height:0!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important}
+    main .intro .button.button-accent .button-icon{position:relative!important;right:auto!important;top:auto!important;bottom:auto!important;inset-inline-start:auto!important;order:2!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0 0 0 12px!important;align-self:center!important;border-radius:50%!important;transform:none!important}
+    main .intro .button.button-accent:hover .button-icon{transform:translate3d(2px,0,0)!important}
+    main .intro .button.button-accent .button-icon::before,
+    main .intro .button.button-accent .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-intro-1') center/12px 12px no-repeat!important}
+    main .intro .button.button-accent:hover .button-icon::before,
+    main .intro .button.button-accent:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    main .intro .button.button-accent:hover .button-icon::after,
+    main .intro .button.button-accent:focus-visible .button-icon::after{transform:translateX(0)!important}
+    main .button-banner-style,
+    main .contact .enquiry-form button.button-accent{width:230px!important;height:56px!important;min-height:56px!important;margin-inline:auto!important;padding:4px!important;border-radius:999px!important;background:linear-gradient(90deg,rgba(8,13,18,.88),rgba(15,28,34,.72)) padding-box,linear-gradient(110deg,#3e92ac 0%,#136df4 100%) border-box!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important}
+    main .button-banner-style .button-label,
+    main .contact .enquiry-form button.button-accent .button-label{position:relative!important;display:block!important;flex:0 0 150px!important;width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important}
+    main .button-banner-style .button-icon,
+    main .contact .enquiry-form button.button-accent .button-icon{position:relative!important;order:2!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0 0 0 12px!important;transform:none!important}
+    main .button-banner-style:hover .button-icon,
+    main .contact .enquiry-form button.button-accent:hover .button-icon{transform:translate3d(2px,0,0)!important}
+    .work .section-heading > .button-banner-style,
+    .contact .enquiry-form button.button-banner-style{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important}
+    .work .section-heading > .button-banner-style .button-label,
+    .contact .enquiry-form button.button-banner-style .button-label{position:relative!important;inset:auto!important;display:block!important;flex:0 0 150px!important;width:150px!important;min-width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important;transform:none!important}
+    .work .section-heading > .button-banner-style .button-icon,
+    .contact .enquiry-form button.button-banner-style .button-icon{position:relative!important;inset:auto!important;right:auto!important;top:auto!important;display:grid!important;place-items:center!important;order:2!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0 0 0 12px!important;transform:none!important}
+    .work .section-heading > .button-banner-style .button-icon::before,
+    .work .section-heading > .button-banner-style .button-icon::after,
+    .contact .enquiry-form button.button-banner-style .button-icon::before,
+    .contact .enquiry-form button.button-banner-style .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-shared-1') center/12px 12px no-repeat!important}
+    .work .section-heading > .button-banner-style .button-label::before,
+    .work .section-heading > .button-banner-style .button-label::after,
+    .contact .enquiry-form button.button-banner-style .button-label::before,
+    .contact .enquiry-form button.button-banner-style .button-label::after{left:0!important;right:0!important;text-align:center!important}
+    .work .section-heading > .button.button-accent.button-banner-style .button-label{position:absolute!important;left:50%!important;top:50%!important;right:auto!important;display:block!important;flex:0 0 150px!important;width:150px!important;min-width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important;transform:translate(-50%,-50%)!important}
+    .work .section-heading > .button.button-accent.button-banner-style .button-icon{position:absolute!important;inset:auto 10px auto auto!important;right:10px!important;top:50%!important;display:grid!important;place-items:center!important;order:2!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0!important;transform:translateY(-50%)!important}
+    .work .section-heading > .button.button-accent.button-banner-style:hover .button-icon{transform:translate3d(2px,-50%,0)!important}
+    .site-header .header-cta.button-banner-style{width:230px!important;height:56px!important;min-height:56px!important;padding:4px!important;border:1px solid transparent!important;border-radius:999px!important;background:linear-gradient(90deg,rgba(8,13,18,.88),rgba(15,28,34,.72)) padding-box,linear-gradient(110deg,#3e92ac 0%,#136df4 100%) border-box!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important}
+    .site-header .header-cta.button-banner-style .button-label{position:relative!important;display:block!important;flex:0 0 150px!important;width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;overflow:hidden!important;text-align:center!important;line-height:1.25!important}
+    .site-header .header-cta.button-banner-style .button-icon{position:absolute!important;inset:auto 10px auto auto!important;right:10px!important;left:auto!important;top:50%!important;bottom:auto!important;order:2!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0!important;display:grid!important;place-items:center!important;z-index:2!important;transform:translateY(-50%)!important}
+    .site-header .header-cta.button-banner-style .button-label{position:relative!important;left:auto!important;top:auto!important;width:110px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;transform:translateX(-10px)!important;text-align:center!important}
+    main .button-banner-style .button-icon::before,
+    main .button-banner-style .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-primary-2') center/12px 12px no-repeat!important}
+    .contact .enquiry-form button.button.button-accent .button-icon{position:absolute!important;inset:auto 10px auto auto!important;right:10px!important;top:50%!important;display:grid!important;place-items:center!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0!important;transform:translateY(-50%)!important;scale:1!important;transform-origin:center!important}
+    .contact .enquiry-form button.button.button-accent .button-label{position:absolute!important;left:50%!important;top:50%!important;width:150px!important;height:1.25em!important;min-height:1.25em!important;padding:0!important;transform:translate(-50%,-50%)!important;text-align:center!important}
+    .contact .enquiry-form button.button.button-accent:hover .button-icon{transform:translate3d(2px,-50%,0)!important;scale:1!important}
+    .contact .enquiry-form button.button.button-accent:hover{transform:translate3d(0,-3px,0)!important}
+    .contact .enquiry-form button.button.button-accent .button-icon::before,
+    .contact .enquiry-form button.button.button-accent .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-contact-2') center/12px 12px no-repeat!important;scale:1!important}
+    .contact .enquiry-form button.button.button-accent:hover .button-icon::before{transform:translateX(145%)!important}
+    .contact .enquiry-form button.button.button-accent:hover .button-icon::after{transform:translateX(0)!important}
+    .contact .enquiry-form button.button.button-accent{width:230px!important;height:56px!important;min-height:56px!important;padding:4px!important;justify-content:center!important;box-sizing:border-box!important}
+    .contact .enquiry-form button.button.button-accent.button-banner-style .button-icon::before,
+    .contact .enquiry-form button.button.button-accent.button-banner-style .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-contact-1') center/12px 12px no-repeat!important}
+    .contact .enquiry-form button.button.button-accent.button-banner-style:hover .button-icon::before,
+    .contact .enquiry-form button.button.button-accent.button-banner-style:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    .contact .enquiry-form button.button.button-accent.button-banner-style:hover .button-icon::after,
+    .contact .enquiry-form button.button.button-accent.button-banner-style:focus-visible .button-icon::after{transform:translateX(0)!important}
+    .contact .enquiry-form button.button.button-accent.button-banner-style .button-icon::before,
+    .contact .enquiry-form button.button.button-accent.button-banner-style .button-icon::after{box-sizing:border-box!important;width:12px!important;height:12px!important;min-width:12px!important;max-width:12px!important;min-height:12px!important;max-height:12px!important;transform-origin:center!important;scale:1!important}
+    .site-header .button-banner-style,
+    .contact .enquiry-form button.button-banner-style{overflow:hidden!important}
+    .site-header .button-banner-style .button-label,
+    .contact .enquiry-form button.button-banner-style .button-label{overflow:hidden!important;white-space:nowrap!important}
+    main .button-banner-style:hover .button-icon::before,
+    main .button-banner-style:focus-visible .button-icon::before{transform:translateX(145%)!important}
+    main .button-banner-style:hover .button-icon::after,
+    main .button-banner-style:focus-visible .button-icon::after{transform:translateX(0)!important}
+    .site-header .button-banner-style .button-icon::before,
+    .site-header .button-banner-style .button-icon::after{width:12px!important;height:12px!important;background:url('assets/eventoria-arrow-right.png?v=button-arrow-primary-2') center/12px 12px no-repeat!important}
+    .site-header .button-banner-style:hover .button-icon::before{transform:translateX(145%)!important}
+    .site-header .button-banner-style:hover .button-icon::after{transform:translateX(0)!important}
+    .site-header .button-banner-style:hover .button-icon{transform:translate3d(2px,-50%,0)!important}
+    .site-header .header-cta.button-banner-style .button-label::before,
+    .site-header .header-cta.button-banner-style .button-label::after{left:0!important;right:0!important;text-align:center!important}
+    .site-header .header-cta.button-banner-style{overflow:hidden!important}
+  </style>
+  <style id="transparent-header-surface">
+    .site-header,.site-header:not(.is-scrolled),.site-header.is-scrolled{position:absolute!important;top:0!important;left:0!important;right:0!important;background:transparent!important;background-color:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  </style>
+</head>
+<body>
+  <div class="concept-loader" id="concept-loader" aria-label="Eventoria introduction" role="dialog" aria-modal="true">
+    <button class="concept-loader__skip" type="button">SKIP INTRO <span></span></button>
+    <div class="concept-loader__wave-field" aria-hidden="true"><canvas class="concept-loader__wave-canvas"></canvas></div>
+    <div class="concept-loader__inner">
+      <div class="concept-loader__logo-wrap"><span class="concept-loader__orbit"></span><img src="assets/eventoria-logo-reference.png" alt="Eventoria"></div>
+    </div>
+    <div class="concept-loader__particles" aria-hidden="true"></div>
+    <div class="concept-loader__enter">SCROLL TO ENTER <i></i></div>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Eventoria home"><span class="logo-mark">E</span><span>eventoria</span></a>
+      <div class="header-actions">
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="work.html">Work</a><a href="expertise.html">Expertise</a><a href="process.html">Process</a><a href="about.html">About</a>
+      </nav>
+      <a class="button button-dark button-banner-style header-cta" href="#contact"><span class="button-icon" aria-hidden="true"></span><span class="button-label">Start an enquiry</span></a>
+      </div>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="work.html">Work</a><a href="expertise.html">Expertise</a><a href="process.html">Process</a><a href="about.html">About</a><a href="contact.html">Start an enquiry</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="hero-stage">
+    <section class="hero section-pad">
+      <div class="hero-motion-field" aria-hidden="true"></div>
+      <div class="hero-plus-field" aria-hidden="true"></div>
+      <div class="hero-media-sequence" aria-hidden="true">
+        <div class="hero-media-sequence__wash"></div>
+        <figure class="hero-media-sequence__main"><video autoplay muted loop playsinline preload="metadata" poster="assets/eventoria-hero-event.png" aria-label="Eventoria live event video"><source src="assets/eventoria-banner.mp4" type="video/mp4"></video></figure>
+        <svg class="hero-orbit-circle__guide" viewBox="0 0 200 200" preserveAspectRatio="none">
+          <circle cx="100" cy="100" r="99.7"></circle>
+          <circle cx="100" cy="100" r="99.7"></circle>
+        </svg>
+        <div class="hero-orbit-circle" aria-hidden="true">
+        <figure class="hero-media-sequence__card hero-media-sequence__card--one"><img src="assets/eventoria-hero-event.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--two"><img src="assets/selected-work-lasers.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--three"><img src="assets/selected-work-stage.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--four"><img src="assets/selected-work-stars.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--five"><img src="assets/what-builds-festival.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--six"><img src="assets/what-you-receive-live.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--seven"><img src="assets/selected-work-superai-clean.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--eight"><img src="assets/eventoria-stage-tone.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--nine"><img src="assets/what-builds-broadcast.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--ten"><img src="assets/what-you-receive-production.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--eleven"><img src="assets/what-builds-conference.png" alt=""></figure>
+        <figure class="hero-media-sequence__card hero-media-sequence__card--twelve"><img src="assets/what-you-receive-creative.png" alt=""></figure>
+        </div>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 aria-label="Crafting Art &amp; Moments"><span class="hero-title-line"><span>Cra<span class="crafting-f-gap">f</span>ting A<span class="art-r-gap">r</span>t</span></span><span class="hero-title-line"><span>&amp; Moments</span></span></h1>
+          <div class="hero-reference-message" aria-label="We turn ambitious ideas into Live Experiences"><span class="hero-reference-message__lead">We turn ambitious ideas into</span><span class="hero-reference-message__title">Live Experiences</span></div>
+          <p class="hero-lede">Carrying the creative vision from the first sketch to the final show.</p>
+          <div class="hero-actions"><a class="button button-accent button-banner-style" href="contact.html"><span class="button-icon" aria-hidden="true"></span><span class="button-label">Start an enquiry</span></a><a class="button button-outline" href="work.html"><span class="button-avatar-group" aria-hidden="true"><img src="assets/eventoria-hero-event.png" alt=""><img src="assets/selected-work-stage.png" alt=""></span><span class="button-label">Explore selected work</span></a></div>
+        </div>
+        <div class="hero-board wireframe-box" aria-label="Event plan visual">
+          <div class="board-top"><span class="wire-label">EVENT / 001</span><span class="board-status"><i></i> In planning</span></div>
+          <div class="board-image placeholder-image"><span>Hero image<br>placeholder</span><b>16:10</b></div>
+          <div class="board-details"><div><small>Client</small><strong>UAE national occasion</strong></div><div><small>Location</small><strong>United Arab Emirates</strong></div></div>
+          <div class="board-footer"><span>Story → Sketch → Show</span><span>UAE / 2025–26</span></div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <section class="intro section-pad section-line" id="about">
+      <div class="container intro-grid">
+        <div class="intro-copy">
+          <p class="section-index">01 / The Eventoria approach</p>
+          <h2 class="approach-title" aria-label="Every project begins with a story that makes the moment matter">
+            <span class="approach-title__line" data-approach-image="assets/eventoria-approach-sign.png"><span>Every</span><i class="approach-title__card" aria-hidden="true"><img src="assets/eventoria-approach-sign.png" alt=""></i><span>project begins</span></span>
+            <span class="approach-title__line" data-approach-image="assets/what-builds-conference.png"><span>with a story</span><i class="approach-title__card" aria-hidden="true"><img src="assets/what-builds-conference.png" alt=""></i><span>that makes</span></span>
+            <span class="approach-title__line" data-approach-image="assets/eventoria-hero-event.png"><span>the moment</span><i class="approach-title__card" aria-hidden="true"><img src="assets/eventoria-hero-event.png" alt=""></i><span><em>matter</em></span></span>
+          </h2>
+          <p class="body-copy">Every celebration of the UAE begins somewhere quieter: a conversation, a question, a single line on paper. We listen for the story a moment is meant to tell, then draw, design, build and direct it through to the final show.</p>
+          <a class="button button-accent button-banner-style" href="process.html"><span class="button-icon" aria-hidden="true"></span><span class="button-label">See the process</span></a>
+        </div>
+        <div class="intro-visual">
+          <figure class="intro-media" aria-label="Eventoria approach preview">
+            <div class="intro-window-bar" aria-hidden="true"><i></i><i></i><i></i><span>EVENTORIA / APPROACH</span></div>
+            <div class="intro-media-image"><img src="assets/eventoria-approach-sign.png" alt="Eventoria identity sign on an architectural facade"></div>
+            <figcaption><span>STORY → SKETCH → SHOW</span><span>UAE / 2025–26</span></figcaption>
+          </figure>
+          <div class="hero-marquee intro-marquee" aria-hidden="true"><div class="hero-marquee-track"><span>EVENTORIA APPROACH&nbsp;&nbsp; • &nbsp;&nbsp;EVENTS&nbsp;&nbsp; • &nbsp;&nbsp;CONCEPTS&nbsp;&nbsp; • &nbsp;&nbsp;EXPERIENCE&nbsp;&nbsp; • &nbsp;&nbsp;</span><span>EVENTORIA APPROACH&nbsp;&nbsp; • &nbsp;&nbsp;EVENTS&nbsp;&nbsp; • &nbsp;&nbsp;CONCEPTS&nbsp;&nbsp; • &nbsp;&nbsp;EXPERIENCE&nbsp;&nbsp; • &nbsp;&nbsp;</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services expertise-build section-dark" id="services">
+      <div class="expertise-build__scroll">
+        <div class="expertise-build__sticky">
+          <div class="expertise-build__ambient" aria-hidden="true"><canvas class="expertise-build__canvas"></canvas></div>
+          <div class="container expertise-build__frame">
+            <header class="expertise-build__heading">
+              <p class="section-index">EXPERTISE</p>
+              <h2>Four disciplines<br><span>One vision</span></h2>
+              <p class="heading-aside">The specialist crafts sit in the same room as the strategy, so nothing is lost between the idea and the event.</p>
+            </header>
+            <div class="expertise-build__viewer">
+              <div class="expertise-build__list" role="tablist" aria-label="Eventoria expertise">
+                <button class="expertise-build__item is-active" role="tab" aria-selected="true" data-expertise-index="0">
+                  <span class="expertise-build__number">01</span><span><span class="expertise-build__eyebrow">STORY</span><strong>Give the moment a reason.</strong><small>We begin with the story, the place and the audience, then shape a creative direction that answers what the occasion needs to say.</small></span>
+                </button>
+                <button class="expertise-build__item" role="tab" aria-selected="false" data-expertise-index="1">
+                  <span class="expertise-build__number">02</span><span><span class="expertise-build__eyebrow">DESIGN</span><strong>Make the idea tangible.</strong><small>We translate the story into the experience: spatial, scenic and sculptural design with a clear role in the whole.</small></span>
+                </button>
+                <button class="expertise-build__item" role="tab" aria-selected="false" data-expertise-index="2">
+                  <span class="expertise-build__number">03</span><span><span class="expertise-build__eyebrow">SHOW</span><strong>Bring the story to life.</strong><small>The show is where the idea moves. We cast, choreograph, rehearse and direct the human and cultural details that make it live.</small></span>
+                </button>
+                <button class="expertise-build__item" role="tab" aria-selected="false" data-expertise-index="3">
+                  <span class="expertise-build__number">04</span><span><span class="expertise-build__eyebrow">DELIVERY</span><strong>Carry it through.</strong><small>Production and live operations turn a strong idea into a reliable night, with event operations, protocol and live delivery held in one view.</small></span>
+                </button>
+              </div>
+              <div class="expertise-build__preview" aria-label="Expertise visual previews">
+                <article class="expertise-build__card is-active" data-expertise-card="0"><div class="expertise-build__card-window"><img src="assets/what-builds-festival.png" alt="Story and creative strategy experience preview"></div></article>
+                <article class="expertise-build__card" data-expertise-card="1"><div class="expertise-build__card-window"><img src="assets/what-builds-conference.png" alt="Spatial, scenic and sculptural design experience preview"></div></article>
+                <article class="expertise-build__card" data-expertise-card="2"><div class="expertise-build__card-window"><img src="assets/expertise-reference-show.png" alt="Show experience with stage and audience seating"></div></article>
+                <article class="expertise-build__card" data-expertise-card="3"><div class="expertise-build__card-window"><img src="assets/expertise-delivery.png" alt="Conference stage and audience experience preview"></div></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-pad section-dark" id="work">
+      <div class="container"><div class="section-heading heading-light"><div><p class="section-index">03 / Selected work</p><h2>Built for the<br><span>moment</span></h2></div><a class="button button-accent button-banner-style" href="contact.html"><span class="button-icon" aria-hidden="true"></span><span class="button-label">Request the work list</span></a></div>
+        <div class="work-reference-stage" aria-label="Selected work stories">
+        <article class="work-scroll-slide work-reference-panel work-gsap-panel work-scroll-slide--reference-capture is-active" aria-label="Selected work project">
+                <video class="work-scroll-slide__image" src="assets/selected-work-first.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Live event atmosphere with guests and stage lighting"></video>
+                <div class="work-scroll-slide__content">
+                  <p class="work-scroll-counter">01 / Selected work</p>
+                  <div class="work-scroll-copy"><h3>One completed<br>project, told in full</h3><span>Client objective, insight, idea, making, production challenge, live moment and outcome.</span></div>
+                </div>
+        </article>
+        <article class="work-scroll-slide work-reference-panel work-gsap-panel work-scroll-slide--reference-capture" aria-label="Selected work in progress">
+                <img class="work-scroll-slide__image" src="assets/selected-work-second.png" alt="Blue-lit auditorium with speaker and audience">
+                <div class="work-scroll-slide__content">
+                  <p class="work-scroll-counter">02 / Work in progress</p>
+                  <div class="work-scroll-copy"><h3>Coming soon /<br>Approval pending</h3><span>A considered project story will be added here once the work is ready to share.</span></div>
+                </div>
+        </article>
+        <article class="work-scroll-slide work-reference-panel work-gsap-panel work-scroll-slide--reference-capture" aria-label="Selected stage and environment work">
+                <img class="work-scroll-slide__image" src="assets/selected-work-last.png" alt="Eventoria production team gathered beneath a stage display">
+                <div class="work-scroll-slide__content">
+                  <p class="work-scroll-counter">03 / Stage and environment</p>
+                  <div class="work-scroll-copy"><h3>Designed for<br>the live moment</h3><span>Spatial identity, scenic direction and production details brought together as one complete experience.</span></div>
+                </div>
+        </article>
+        </div>
+        <div class="work-wireframe-rail" aria-label="Selected work text list">
+          <article>
+            <small>01 / Selected work</small>
+            <h3>One completed<br>project, told in full</h3>
+            <p>Client objective, insight, idea, making, production challenge, live moment and outcome.</p>
+          </article>
+          <article>
+            <small>02 / Work in progress</small>
+            <h3>Coming soon /<br>Approval pending</h3>
+            <p>A considered project story will be added here once the work is ready to share.</p>
+          </article>
+          <article>
+            <small>03 / Work archive</small>
+            <h3>Project detail / View on approval</h3>
+            <p>Additional selected work, credits and delivery details will follow.</p>
+          </article>
+        </div>
+        <div class="project-grid work-project-rail" aria-label="Selected work"><article class="project-card project-large"><div class="project-image" style="--project-image:url('assets/selected-work-stage.png')"><span class="project-category">BRANDING IDENTITY, LOGO, USER RESEARCH, USER TESTING</span><span class="project-corner" aria-hidden="true"></span><div class="project-meta"><div><h3>Ayhvay Resort</h3><p>Creating a brand to showcase their legacy.</p></div></div></div></article><article class="project-card"><div class="project-image" style="--project-image:url('assets/selected-work-lasers.png')"><span class="project-category">UI UX DESIGN, WEB DEVELOPMENT, WEBSITE DESIGN</span><span class="project-corner" aria-hidden="true"></span><div class="project-meta"><div><h3>Fascellery</h3><p>Experience a new era of jewelry with lab-grown diamonds.</p></div></div></div></article><article class="project-card"><div class="project-image" style="--project-image:url('assets/selected-work-stars.png')"><span class="project-category">ART DIRECTION</span><span class="project-corner" aria-hidden="true"></span><div class="project-meta"><div><h3>Shree House</h3><p>Making every detail feel intentional.</p></div></div></div></article></div>
+      </div>
+    </section>
+
+    <section class="process section-pad" id="process"><div class="container process-grid"><div><p class="section-index">04 / How it works</p><h2>Five steps<br><span>One project team</span></h2><p class="body-copy">Each step names what you receive, from the first brief to the final show.</p></div><div class="process-list"><article><span>01</span><div><h3>Listen</h3><p>Brief, RFP and objectives translated into the real question.</p></div></article><article><span>02</span><div><h3>Imagine</h3><p>Story, concept and the creative direction behind it.</p></div></article><article><span>03</span><div><h3>Design</h3><p>Experience, spatial and scenic development made tangible.</p></div></article><article><span>04</span><div><h3>Produce</h3><p>Build, cast, rehearse and prepare every practical detail.</p></div></article><article><span>05</span><div><h3>Deliver</h3><p>Live show, operations and protocol carried through to the end.</p></div></article></div></div></section>
+
+    <section class="proof section-line" id="proof"><div class="proof-reference-scroll"><div class="proof-reference-sticky"><div class="proof-reference-heading"><div class="proof-heading"><p class="section-index">WHAT YOU RECEIVE</p><h2>What you receive</h2><p class="body-copy">A clear creative direction, a visible practical plan and calm delivery on site.</p></div></div><div class="proof-reference-stage" aria-label="What you receive"><div class="proof-reference-orbit"><span class="proof-orbit-ring"></span><span class="proof-orbit-glow"></span><img class="is-active" src="assets/what-you-receive-creative.png" alt=""><img src="assets/what-you-receive-production.png" alt=""><img src="assets/what-you-receive-live.png" alt=""></div><ul class="proof-reference-list"><li class="proof-reference-step proof-reference-step--one is-active"><h3><small>01 / DIRECTION</small>Creative direction</h3><div class="proof-reference-line"><span></span></div><p>Every decision has a reason, rooted in the occasion and the audience.</p></li><li class="proof-reference-step proof-reference-step--two"><h3><small>02 / PRODUCTION PLAN</small>Production planning</h3><div class="proof-reference-line"><span></span></div><p>The creative and operational details stay connected from sketch to show.</p></li><li class="proof-reference-step proof-reference-step--three"><h3><small>03 / LIVE DELIVERY</small>Live delivery</h3><div class="proof-reference-line"><span></span></div><p>One team carries the work through the live moment and final cue.</p></li><li class="proof-reference-step proof-reference-step--four"><h3><small>04 / VISIBILITY</small>Built for visibility</h3><div class="proof-reference-line"><span></span></div><p>Built to be found in Google and in AI answers. Visibility is part of the build from day one.</p></li></ul></div></div></div></section>
+    <section class="clients section-pad" id="clients"><div class="container"><div class="section-heading clients-section-heading"><div><p class="section-index">06 / Our clients</p><h2>For moments<br><span>that matter</span></h2></div><p class="heading-aside">Government, cultural, national and destination clients across the UAE and the region.</p></div><div class="client-reference-top" aria-label="Special thanks to all our partners"><div class="client-reference-card client-reference-domestika"><span>DOMËSTIKA</span></div><div class="client-reference-card client-reference-nk"><span>/nk</span></div><div class="client-reference-thanks"><div class="client-reference-milan-logo" aria-label="Milan Productions Inc"><span class="milan-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="milan-name">MILAN<small>PRODUCTIONS INC.</small></span></div></div></div><div class="client-grid client-logo-grid" aria-label="Eventoria client partners"><div class="client-card client-card-empty" aria-hidden="true"></div><div class="client-card"><div class="client-logo creative-logo" aria-label="Creative Corner"><span class="creative-mark" aria-hidden="true"></span><span class="creative-name"><span>creative</span><span>corner</span></span></div></div><div class="client-card"><div class="client-logo hostinger-logo" aria-label="Hostinger"><span class="hostinger-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="hostinger-name">HOSTINGER</span></div></div><div class="client-card"><div class="client-logo milan-logo" aria-label="Milan Productions Inc"><span class="milan-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="milan-name">MILAN<small>PRODUCTIONS INC.</small></span></div></div></div></div></section>
+    <section class="social section-pad section-line"><div class="container"><div class="section-heading"><div><p class="section-index">07 / Social media & events cards</p><h2>Moments from<br><span>the work</span></h2></div><a class="text-link" href="index.html">Follow Eventoria <span>↗</span></a></div><div class="project-grid social-grid" aria-label="Eventoria moments from the work"><div class="project-image placeholder-image" aria-label="Events card 1"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 2"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 3"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 4"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 5"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 6"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 7"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 8"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 9"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 10"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div><div class="project-image placeholder-image" aria-label="Events card 11"><img class="card-instagram-image" src="assets/social-instagram-clean.svg" alt=""></div></div></div></section>
+
+    <section class="quote section-pad" id="core-idea"><div class="container quote-grid"><p class="section-index">06 / The core idea</p><blockquote class="core-idea-copy">“Eventoria transforms meaningful stories and ambitious ideas into live experiences, carrying the creative vision from the first sketch to the final show.”</blockquote></div></section>
+
+    <section class="contact section-pad section-dark" id="contact"><div class="container contact-grid"><div><p class="section-index">CONTACT EVENTORIA</p><h2>Bring us the<br><span>occasion</span></h2><p class="contact-copy">Share a brief, a project enquiry or a confidential conversation. A few details are enough to get started.</p></div><form class="enquiry-form" id="enquiry-form"><label>Your name<input required name="name" type="text" placeholder="e.g. Maya Shah"></label><label>Work email<input required name="email" type="email" placeholder="maya@company.com"></label><label>How can we help?<select name="event"><option>Share a brief</option><option>Talk to the team</option><option>Request a meeting</option><option>Confidential enquiry</option></select></label><label>Tell us a little more<textarea name="message" rows="3" placeholder="Occasion, place, ambition…"></textarea></label><button class="button button-accent" type="submit"><span class="button-icon" aria-hidden="true"></span><span class="button-label">Send enquiry</span></button><p class="form-status" role="status" aria-live="polite"></p></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="logo" href="index.html"><span class="logo-mark">E</span><span>eventoria</span></a><p>Every moment begins long before it becomes real.</p></div><div><small>Explore</small><a href="expertise.html">Expertise</a><a href="work.html">Work</a><a href="process.html">Process</a></div><div><small>Say hello</small><a href="mailto:hello@eventoria.studio">hello@eventoria.studio</a><a href="tel:+971000000000">+971 00 000 0000</a></div><div><small>Follow</small><a href="index.html" aria-label="Facebook">Facebook</a><a href="index.html" aria-label="LinkedIn">LinkedIn</a><a href="index.html" aria-label="Instagram">Instagram</a><a href="index.html" aria-label="X">X</a></div></div><div class="container footer-bottom"><span>© 2025 Eventoria Studio / UAE</span><span><a href="privacy.html">Privacy</a> · <a href="cookie-policy.html">Cookies</a> · <a href="terms.html">Terms</a> · Wireframe / v1.0</span></div></footer>
+  <style id="selected-work-sticky-fix">
+    .work .work-reference-panel{position:sticky!important;top:0!important;width:100%!important;height:100svh!important;min-height:620px!important;margin:0!important;opacity:1!important;transform:none!important;overflow:hidden!important}
+    .work .work-reference-panel:nth-of-type(1){z-index:1!important}
+    .work .work-reference-panel:nth-of-type(2){z-index:2!important}
+    .work .work-reference-panel:nth-of-type(3){z-index:3!important}
+    @media(max-width:700px){.work .work-reference-panel{height:100svh!important;min-height:560px!important}}
+    .work-reference-stage{position:relative!important;height:auto!important;min-height:0!important;overflow:visible!important}
+    .work.work-gsap-ready .work-reference-stage{height:100svh!important;min-height:560px!important;overflow:hidden!important}
+    .work.work-gsap-ready .work-reference-stage .work-gsap-panel{position:absolute!important;inset:0!important;height:100%!important;min-height:0!important;transform:none!important;translate:0 var(--panel-y,0%)!important}
+    .work.work-scroll-fallback .work-reference-stage{height:300svh!important;min-height:0!important;overflow:hidden!important}
+    .work.work-scroll-fallback .work-reference-stage .work-gsap-panel{position:absolute!important;inset:0!important;width:100%!important;height:100svh!important;min-height:0!important;translate:none!important}
+    .work.work-scroll-fallback .work-reference-stage .work-gsap-panel{transform:translate3d(0,var(--panel-y,0%),0)!important}
+    .work.work-scroll-fallback .work-reference-stage.is-scroll-active .work-gsap-panel{position:absolute!important;inset:0!important;width:100%!important;height:100svh!important;min-height:0!important;translate:none!important}
+    /* Keep all What you receive rows available like the reference services list. */
+    .proof-reference-list{position:absolute!important;top:48%!important;right:0!important;bottom:auto!important;left:0!important;width:100%!important;height:auto!important;display:flex!important;flex-direction:column!important;gap:470px!important;transform:translateY(var(--proof-list-shift,0px))!important;transition:transform .08s linear!important}
+    .proof-reference-step,.proof-reference-step--one,.proof-reference-step--two,.proof-reference-step--three{position:relative!important;top:auto!important;right:auto!important;bottom:auto!important;left:auto!important;transform:none!important;height:150px!important;min-height:150px!important;opacity:1!important;display:grid!important}
+    .proof-reference-step.is-active{opacity:1!important}
+    @media(max-width:600px){.proof-reference-list{top:39%!important;gap:180px!important}.proof-reference-step,.proof-reference-step--one,.proof-reference-step--two,.proof-reference-step--three{height:120px!important;min-height:120px!important}}
+    @media(min-width:601px){.proof-reference-orbit{top:24%!important}}
+    @media(min-width:601px){.proof-reference-step h3,.proof-reference-step p{text-align:left!important}}
+    /* Sticky viewport fix: overflow on the section was cancelling the pinned circle. */
+    .proof{overflow:visible!important}
+    .proof-reference-scroll{overflow:visible!important}
+    .proof-reference-sticky{position:-webkit-sticky!important;position:sticky!important;top:0!important;overflow:visible!important}
+    .proof-reference-orbit .proof-orbit-ring{display:none!important}
+    .proof-reference-orbit{background-image:none!important}
+    .proof-reference-orbit>img{display:none!important}
+    .proof-reference-orbit{background:linear-gradient(135deg,#0b1e2d 0%,#1e5969 35%,#050b12 58%,#153b49 100%)!important}
+    .proof-event-wall{position:absolute;inset:-18%;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;padding:14px;background:linear-gradient(135deg,#0b1e2d 0%,#1e5969 35%,#050b12 58%,#153b49 100%);transform:perspective(900px) scale(1.08);transform-origin:center;will-change:transform}
+    .proof-event-wall__column{display:grid;gap:14px;align-content:start;animation:proof-event-column-drift calc(10s + var(--event-column-index) * 1.4s) ease-in-out infinite alternate;transform:rotateY(calc((var(--event-column-index) - 2) * -7deg)) scaleX(calc(1 - abs(var(--event-column-index) - 2) * .06));will-change:transform}
+    .proof-event-wall__column img{width:100%;height:180px;object-fit:cover;border-radius:10px;opacity:1!important;display:block!important;filter:saturate(1.08) contrast(1.08);}
+    .proof-event-wall__set{opacity:0!important;pointer-events:none}.proof-event-wall[data-active-set="0"] .proof-event-wall__set[data-set="0"],.proof-event-wall[data-active-set="1"] .proof-event-wall__set[data-set="1"],.proof-event-wall[data-active-set="2"] .proof-event-wall__set[data-set="2"],.proof-event-wall[data-active-set="3"] .proof-event-wall__set[data-set="3"]{opacity:1!important;pointer-events:auto}
+    .proof-event-wall__column:nth-child(1),.proof-event-wall__column:nth-child(5){margin-top:80px}.proof-event-wall__column:nth-child(2),.proof-event-wall__column:nth-child(4){margin-top:28px}.proof-event-wall__column:nth-child(3){margin-top:-18px}
+    @keyframes proof-event-column-drift{0%{translate:0 -34px}100%{translate:0 34px}}
+    .proof-reference-scroll{height:400vh!important}
+    /* Continue the same soft wave field from How it works behind the proof rail. */
+    .work{position:relative!important;z-index:100!important;isolation:isolate!important}
+    .work .work-reference-stage{position:relative!important;z-index:1!important;isolation:isolate!important}
+    .process{position:relative!important;z-index:0!important;isolation:isolate!important;overflow:visible!important;background:#07131d!important}
+    .process::before{
+      content:''!important;display:block!important;position:absolute!important;z-index:0!important;
+      left:-12%!important;right:-12%!important;top:8%!important;height:calc(84% + 400vh)!important;
+      pointer-events:none!important;
+      background:
+        linear-gradient(90deg,rgba(16,16,18,.92),rgba(16,16,18,0) 28%,rgba(16,16,18,0) 78%,rgba(16,16,18,.74)),
+        url('assets/eventoria-how-it-works-wave-glow.png?v=wave-glow-restore') center 52% / 112% auto no-repeat!important;
+      background-attachment:scroll!important;opacity:.2!important;mix-blend-mode:screen!important;
+      filter:blur(28px) saturate(.72) brightness(.78)!important;
+      -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+      mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+      transform:translate3d(4%,0,0) scale(1.04)!important;
+      animation:what-builds-reference-glow 34s ease-in-out infinite alternate!important;
+    }
+    .proof{position:relative!important;background:transparent!important}
+    .proof-reference-scroll{background:transparent!important}
+    .proof::before{display:none!important;content:none!important}
+    .quote{background:transparent!important}
+    .quote::before,.quote::after{display:none!important;content:none!important}
+    .proof-reference-heading h2{white-space:nowrap!important}
+    .proof-reference-heading{justify-content:center!important;text-align:center!important}
+    .proof-reference-heading .proof-heading{max-width:none!important;margin-inline:auto!important;text-align:center!important}
+    .work .work-scroll-slide--reference-capture{transform:translate3d(0,var(--panel-y,0%),0)!important}
+    .work>.container{position:relative!important}
+    .work>.container>.section-heading{position:absolute!important;top:0!important;left:100px!important;right:100px!important;z-index:5!important;margin:0!important;pointer-events:none!important}
+    .work>.container>.section-heading .button{pointer-events:auto!important}
+    .work-reference-stage{overflow:hidden!important;height:300svh!important;min-height:620px!important}
+    .work{min-height:0!important}
+    .work>.container>.section-heading{position:relative!important;top:auto!important;left:auto!important;right:auto!important;width:auto!important;margin:0 100px 48px!important;padding-top:clamp(56px,8vw,112px)!important;pointer-events:auto!important}
+    .work{overflow:visible!important}
+    .work-reference-stage{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;overflow:visible!important}
+    .work>.container{min-height:0!important}
+    .work.work-scroll-fallback .work-reference-stage{height:auto!important;min-height:0!important;overflow:visible!important}
+    .work.work-scroll-fallback .work-reference-stage .work-gsap-panel{position:sticky!important;top:0!important;left:auto!important;right:auto!important;bottom:auto!important;inset:auto!important;display:block!important;width:100%!important;height:100svh!important;min-height:620px!important;margin:0 0 45svh!important;transform:none!important;translate:none!important;opacity:1!important;visibility:visible!important;overflow:hidden!important}
+    .work.work-scroll-fallback .work-reference-stage .work-gsap-panel:last-child{margin-bottom:0!important}
+    .work.work-reference-native .work-reference-stage{position:relative!important;height:auto!important;min-height:0!important;overflow:visible!important}
+    .work.work-reference-native .work-reference-stage>.work-reference-panel{position:sticky!important;top:0!important;display:block!important;width:100%!important;height:100svh!important;min-height:620px!important;margin:0 0 45svh!important;inset:auto!important;transform:none!important;translate:none!important;opacity:1!important;visibility:visible!important;overflow:hidden!important}
+    .work.work-reference-native .work-reference-stage>.work-reference-panel:first-child{margin-bottom:100svh!important}
+    .work.work-reference-native .work-reference-stage>.work-reference-panel:last-child{margin-bottom:0!important}
+    .work.work-reference-native{overflow:visible!important}
+    /* Authoritative reference-style stack: top:0 must not be reset by inset:auto. */
+    .work.work-reference-native .work-reference-stage>.work-reference-panel{
+      position:-webkit-sticky!important;
+      position:sticky!important;
+      top:0!important;
+      inset:unset!important;
+      height:100svh!important;
+      margin-bottom:45svh!important;
+      transform:none!important;
+      translate:none!important;
+      opacity:1!important;
+      visibility:visible!important;
+      overflow:hidden!important;
+    }
+    .work.work-reference-native .work-reference-stage>.work-reference-panel:last-child{margin-bottom:0!important}
+    .contact .enquiry-form button.button-accent .button-icon{position:relative!important;align-self:center!important;flex:0 0 24px!important;width:24px!important;min-width:24px!important;height:24px!important;margin:0!important;padding:0!important;transform:none!important;display:grid!important;place-items:center!important;border-radius:50%!important}
+    .contact .enquiry-form button.button-accent .button-icon::before{position:absolute!important;inset:0!important;margin:auto!important;width:12px!important;height:12px!important;transform:none!important}
+    .contact .enquiry-form button.button-accent{justify-self:center!important;margin-inline:auto!important}
+    .contact::before,.contact::after{width:100vw!important;height:100%!important;left:0!important;top:0!important;background-size:cover!important;background-position:center!important}
+    .proof-reference-scroll,.proof-reference-stage{z-index:1}
+    @media(max-width:700px){.proof::before{left:-34%!important;right:-34%!important;top:18%!important;height:64%!important;background-size:170% auto!important;opacity:.14!important}}
+    @media(min-width:601px){.proof-reference-orbit{top:50%!important}}
+    /* Three.js pinned portal */
+    .proof-portal-ready{overflow:visible!important}.proof-portal-ready .proof-reference-scroll{height:55vh!important;min-height:0!important;overflow:visible!important;background:#05080c!important}
+    .proof-portal-ready .proof-reference-scroll.is-proof-complete{height:0!important;min-height:0!important}.proof-portal-ready .proof-reference-scroll.is-proof-complete .proof-reference-sticky{height:0!important;min-height:0!important}
+    /* The active implementation uses setupProofReferenceScroll directly. */
+    #proof .proof-reference-scroll{height:280vh!important;min-height:0!important}
+    #clients{position:relative!important;z-index:2!important;margin-top:-105vh!important}
+    .proof-portal-ready .proof-reference-sticky{position:relative!important;height:100svh!important;min-height:620px!important;overflow:hidden!important;background:radial-gradient(ellipse at 18% 52%,rgba(11,66,75,.3),transparent 42%),radial-gradient(ellipse at 84% 46%,rgba(16,56,59,.24),transparent 43%),#05080c!important}
+    .proof-portal-ready .proof-reference-sticky::after{content:'';position:absolute;inset:0;z-index:30;pointer-events:none;opacity:.13;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.11) 4px,transparent 5px)}
+    .proof-portal-ready .proof-reference-orbit{width:min(75vh,640px)!important;height:min(75vh,640px)!important;top:52%!important;transform:translate(-50%,-50%) scale(var(--portal-emerge,.02))!important;scale:1!important;z-index:5!important;background:linear-gradient(135deg,#0b1e2d 0%,#1e5969 35%,#050b12 58%,#153b49 100%)!important;overflow:hidden!important;border-radius:50%!important;box-shadow:0 0 0 1px rgba(213,243,243,.55),0 0 100px rgba(30,150,168,.24)!important}
+    .proof-portal-ready .proof-portal-canvas{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;display:block!important;z-index:2!important}
+    .proof-portal-ready .proof-reference-orbit>img{display:none!important}.proof-portal-ready .proof-orbit-ring{z-index:5!important}.proof-portal-ready .proof-orbit-glow{z-index:4!important}
+    .proof-portal-ready .proof-reference-list{top:50%!important;display:flex!important;flex-direction:column!important;gap:0!important;transform:translateY(var(--portal-rail-y,0px))!important;z-index:12!important}
+    .proof-portal-ready .proof-reference-step,.proof-portal-ready .proof-reference-step--one,.proof-portal-ready .proof-reference-step--two,.proof-portal-ready .proof-reference-step--three,.proof-portal-ready .proof-reference-step--four{height:min(56vh,480px)!important;min-height:min(56vh,480px)!important;opacity:.35!important;transition:none!important}
+    .proof-portal-ready .proof-reference-step.is-active{opacity:1!important}.proof-portal-ready .proof-reference-step h3{font-size:clamp(25px,2.2vw,40px)!important}.proof-portal-ready .proof-reference-step p{font-size:clamp(14px,1.15vw,20px)!important}
+    @media(max-width:767px){.proof-portal-ready .proof-reference-sticky{height:auto!important;min-height:100svh!important;overflow:visible!important}.proof-portal-ready .proof-reference-scroll{height:auto!important;min-height:0!important}.proof-portal-ready .proof-reference-orbit{position:relative!important;left:auto!important;top:auto!important;margin:150px auto 30px!important;width:80vw!important;height:80vw!important;transform:scale(1)!important}.proof-portal-ready .proof-reference-list{position:relative!important;top:auto!important;transform:none!important;padding:0 20px!important}.proof-portal-ready .proof-reference-step,.proof-portal-ready .proof-reference-step--one,.proof-portal-ready .proof-reference-step--two,.proof-portal-ready .proof-reference-step--three,.proof-portal-ready .proof-reference-step--four{height:auto!important;min-height:0!important;display:block!important;padding:32px 0!important;opacity:1!important}.proof-portal-ready .proof-reference-step .proof-reference-line{display:none!important}}
+    /* Keep the core idea and contact section as one continuous dark field. */
+    #core-idea{background:transparent!important;background-color:transparent!important;background-image:none!important;border:0!important}
+    #core-idea::before,#core-idea::after{display:none!important;content:none!important}
+    body:has(.hero) #contact{background:linear-gradient(to bottom,#020406 0%,rgba(2,4,6,.96) 15%,rgba(2,4,6,.45) 42%,rgba(2,4,6,.25) 100%),radial-gradient(ellipse 38% 58% at 14% 74%,rgba(19,109,244,.34),transparent 72%),radial-gradient(ellipse 36% 52% at 88% 22%,rgba(19,109,244,.28),transparent 74%),url('assets/eventoria-how-it-works-wave-glow.png') center 56% / 145% 145% scroll no-repeat!important;border-top:0!important}
+    #core-idea::after{content:''!important;display:block!important;position:absolute!important;left:0!important;right:0!important;bottom:-120px!important;height:220px!important;background:linear-gradient(to bottom,rgba(2,4,6,.9),rgba(2,4,6,.45) 45%,transparent)!important;filter:blur(18px)!important;pointer-events:none!important;z-index:0!important}
+    /* Restore the original footer frame and its full-height wordmark composition. */
+    .site-footer{min-height:680px!important;padding-top:92px!important;padding-bottom:34px!important}
+    .site-footer .footer-grid{min-height:300px!important;padding-bottom:58px!important}
+    .site-footer .footer-bottom{top:calc(92px + 300px - 28px)!important}
+    .site-footer::after{font-size:clamp(112px,20vw,350px)!important;bottom:-.08em!important}
+    /* Blend the Selected Work media into the dark section header. */
+    .work .work-scroll-slide--reference-capture::before{
+      content:''!important;
+      position:absolute!important;
+      inset:0 0 auto!important;
+      height:30%!important;
+      z-index:1!important;
+      pointer-events:none!important;
+      background:linear-gradient(to bottom,rgba(5,9,14,.98) 0%,rgba(5,9,14,.82) 34%,rgba(5,9,14,.34) 72%,transparent 100%)!important;
+    }
+    .work .work-scroll-slide--reference-capture .work-scroll-slide__content{z-index:2!important}
+    .work .work-scroll-slide--reference-capture:nth-child(3)::after{
+      content:''!important;
+      position:absolute!important;
+      inset:0!important;
+      z-index:1!important;
+      pointer-events:none!important;
+      background:linear-gradient(to bottom,rgba(3,8,15,.18),rgba(3,8,15,.42))!important;
+    }
+  </style>
+  <script src="concept.js?v=circle-event-photos-2-eventoria-media-sequence-123"></script>
+
+    <script>
+      (() => {
+        const fourth = document.querySelector('.proof-reference-step--four');
+        if (!fourth) return;
+        fourth.querySelector('h3').innerHTML = '<small>04 / AUDIENCE EXPERIENCE</small>Memorable moments';
+        fourth.querySelector('p').textContent = 'Every detail engages audiences and creates lasting impressions.';
+        fourth.querySelector('h3').style.whiteSpace = 'nowrap';
+      })();
+    </script>
+  <link rel="stylesheet" href="scroll-layout-fixes.css?v=13">
+</body>
+</html>

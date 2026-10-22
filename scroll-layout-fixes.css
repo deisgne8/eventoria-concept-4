@@ -1,0 +1,86 @@
+/* Keep neighboring sections in their own layout space. */
+#clients{margin-top:0!important}
+.social{margin-bottom:0!important;overflow:clip!important}
+#core-idea{margin-top:0!important;margin-bottom:0!important;padding-top:100px!important;padding-bottom:100px!important}
+#core-idea .quote-grid{transform:none!important}
+@media(max-width:700px){
+  main > section.intro .intro-copy h2.approach-title{display:block!important;font-size:clamp(28px,7.5vw,42px)!important;line-height:1.15!important;height:auto!important}
+  main > section.intro .approach-title .approach-title__line{display:block!important;width:auto!important;height:auto!important;white-space:normal!important}
+  main > section.intro .approach-title .approach-title__line>span{display:inline!important}
+  main > section.intro .approach-title .approach-title__line>span+span::before{content:' '}
+  main > section.intro .approach-title .approach-title__card{display:none!important}
+  main > section.intro .approach-title .approach-title__card+span::before{content:' '}
+  .clients .client-reference-top,.clients .client-logo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;height:auto!important}
+  .clients .client-reference-top>*,.clients .client-logo-grid>.client-card{min-width:0!important;width:auto!important;height:140px!important;overflow:hidden!important}
+  .clients .client-logo{transform:scale(.65)!important;flex-shrink:0!important}
+  .clients .client-reference-top>*>span{font-size:18px!important}
+  .work .work-scroll-slide__content .work-scroll-copy{left:24px!important;right:24px!important;bottom:52px!important;top:auto!important;width:auto!important;max-width:none!important}
+  .work .work-scroll-copy h3{font-size:30px!important;line-height:1.1!important;margin-bottom:16px!important}
+  .work .work-scroll-copy>span{font-size:14px!important;line-height:1.5!important;max-width:100%!important;display:block!important}
+  .work .work-scroll-counter{left:24px!important;bottom:24px!important;top:auto!important}
+  #proof .proof-reference-scroll{height:auto!important;min-height:0!important;padding:64px 20px!important}
+  #proof .proof-reference-sticky{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;overflow:visible!important}
+  #proof .proof-reference-heading{position:relative!important;inset:auto!important;display:block!important;margin-bottom:32px!important}
+  #proof .proof-reference-heading h2{white-space:normal!important;font-size:38px!important}
+  #proof .proof-reference-stage{position:relative!important;inset:auto!important;height:auto!important;min-height:0!important}
+  #proof .proof-reference-orbit{position:relative!important;inset:auto!important;width:240px!important;height:240px!important;margin:0 auto 40px!important;transform:none!important;display:block!important;visibility:visible!important}
+  #proof .proof-reference-list{position:relative!important;inset:auto!important;height:auto!important;transform:none!important;gap:0!important;padding:0!important}
+  #proof .proof-reference-step{display:block!important;width:100%!important;height:auto!important;min-height:0!important;padding:24px 0!important;opacity:1!important;transform:none!important;border-top:1px solid #ffffff25}
+  #proof .proof-reference-step h3{font-size:25px!important;line-height:1.2!important;margin-bottom:12px!important}
+  #proof .proof-reference-step p{font-size:15px!important;line-height:1.5!important}
+  #proof .proof-reference-line{display:none!important}
+}
+@media(max-width:700px){
+  #clients .client-reference-top,#clients .client-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important}
+  #clients .client-reference-top>div,#clients .client-logo-grid>.client-card{grid-column:auto!important;grid-row:auto!important;height:140px!important;min-height:140px!important;max-width:100%!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important}
+  #clients .client-logo-grid .client-card .client-logo{transform:scale(.6)!important}
+  #clients .client-reference-top .client-reference-milan-logo,#clients .client-reference-top .client-reference-hostinger-logo{transform:scale(.58)!important;flex-shrink:0!important}
+  #clients .client-reference-card>span:not(.client-card-frame){font-size:17px!important}
+}
+/* Sticky content must remain visible throughout its reserved scroll track. */
+main #proof{overflow:visible!important;padding-block:0!important}
+@media(min-width:701px){
+  body:has(.hero) .process.is-timeline-complete .process-grid{position:absolute!important;top:auto!important;bottom:0!important;left:50%!important;transform:translateX(-50%)!important}
+}
+/* Clip horizontal artwork without creating a second scroll container. */
+html body:not(.intro-active){overflow-x:clip!important;overflow-y:visible!important}
+/* Center the approach video independently of the decorative marquee. */
+main .intro .intro-visual{width:100%!important;display:flex!important;justify-content:center!important;align-items:center!important;margin-inline:auto!important;left:auto!important;right:auto!important;transform:none!important}
+main .intro .intro-visual .intro-media{margin-inline:auto!important;left:auto!important;right:auto!important;translate:none!important;transform:none!important;flex-shrink:0!important}
+/* Equal, compact breathing room around each expertise card. */
+main .services.expertise-build .expertise-build__list{gap:0!important}
+main .services.expertise-build .expertise-build__item{height:auto!important;min-height:0!important;padding-top:40px!important;padding-bottom:40px!important;align-items:center!important}
+@media(max-width:700px){
+  main .services.expertise-build .expertise-build__item{padding-top:24px!important;padding-bottom:24px!important}
+}
+body:has(.hero) .process .process-list::after{background:#FFCC33!important;box-shadow:0 0 12px rgba(255,204,51,.4)!important}
+@media(min-width:701px){
+  #proof .proof-reference-list{gap:160px!important}
+}
+
+main .social .social-grid .project-image:nth-child(1){background-image:url('assets/unsplash-event-01.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(2){background-image:url('assets/unsplash-event-02.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(3){background-image:url('assets/unsplash-event-03.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(4){background-image:url('assets/unsplash-event-04.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(5){background-image:url('assets/unsplash-event-05.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(6){background-image:url('assets/unsplash-event-06.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(7){background-image:url('assets/unsplash-event-07.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(8){background-image:url('assets/unsplash-event-08.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(9){background-image:url('assets/unsplash-event-09.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(10){background-image:url('assets/unsplash-event-10.jpg')!important;background-size:cover!important;background-position:center!important}
+
+main .social .social-grid .project-image:nth-child(11){background-image:url('assets/unsplash-event-11.jpg')!important;background-size:cover!important;background-position:center!important}
+.site-footer::after{content:''!important;display:block!important;position:absolute!important;left:24px!important;right:24px!important;bottom:24px!important;width:auto!important;height:clamp(90px,18vw,290px)!important;background:url('assets/eventoria-footer-wordmark.svg?v=black') center/contain no-repeat!important;transform:none!important;-webkit-text-fill-color:initial!important;opacity:1!important}
+@media(max-width:700px){.site-footer::after{left:20px!important;right:20px!important;bottom:24px!important;height:90px!important}}
+/* Oversized footer wordmark, cropped at the bottom edge. */
+.site-footer{overflow:hidden!important}
+.site-footer::after{left:0!important;right:0!important;width:100%!important;height:18.35vw!important;bottom:-8vw!important;background-position:top center!important;background-size:100% auto!important}
